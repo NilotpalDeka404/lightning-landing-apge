@@ -1,0 +1,156 @@
+:root{
+    --color-light-gold: #DCBC95;
+    --color-dark-1: #222529;
+    --color-dark-2: #2d3034d2;
+    --color-grey: #CCCDCD;
+    --color-white: #FFFFFF;
+}
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face{
+    font-family: "Calibri", "Gilroy";
+    src: url("../Fonts/Calibri/Calibri-Regular.ttf") format("ttf");
+    src: url("../Fonts/Gilroy/Gilroy-Light.otf") format("otf");
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: "Calibri", "Gilroy";
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to right bottom, var(--color-dark-2) 0%, var(--color-dark-2) 40%, var(--color-dark-1) 40%, var(--color-dark-1) 60%, var(--color-dark-2) 60%),
+    linear-gradient(to left bottom, var(--color-dark-2) 0%, var(--color-dark-2) 40%, var(--color-dark-1) 40%, var(--color-dark-1) 60%, var(--color-dark-2) 60%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 130rem;
+    height: 80vh;
+    background-color: var(--color-dark-1);
+    box-shadow: 0 3rem 4rem rgba(0, 0, 0, 0.3);
+    border-radius: .8rem;
+}
+
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 3rem;
+    color: var(--color-white);
+}
+
+.logo__box{
+    font-size: 1.2rem;
+    margin-left: 5rem;
+    cursor: pointer;
+}
+
+.links__box ul li{
+    display: inline-block;
+    list-style: none;
+    margin-right: 3rem;
+    font-size: 1.6rem;
+    font-weight: 300;
+    text-transform: capitalize;
+    margin-top: .4rem;
+}
+
+.navigation__links:link, .navigation__links:visited{
+    position: relative;
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+.navigation__links::after{
+    content: "";
+    position: absolute;
+    bottom: -0.38rem;
+    left: 0;
+    width: 100%;
+    height: .175rem;
+    background-color: var(--color-white);
+    transform: scale(0, 1);
+
+    transition: all .4s;
+}
+
+.navigation__links:hover::after{
+    transform: scale(1, 1);
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.typography{
+    width: 40%;
+    color: var(--color-white);
+    margin-right: 1%;
+}
+
+.heading__primary{
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-weight: 300;
+}
+
+.heading__primary span{
+    display: block;
+    color: var(--color-light-gold);
+    font-family: "Gilroy";
+}
+
+.secondary{
+    width: 70%;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+}
+
+.heading__secondary{
+    font-weight: 300;
+    font-size: 1.7rem;
+}
+
+.play__box{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.play{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.explore{
+    margin-top: .3rem;
+    margin-left: 1rem;
+    color: var(--color-light-gold);
+    font-size: 1.7rem;
+    font-weight: 300;
+}
+
+.images{
+    width: 45%;
+    margin-top: 5rem;
+    display: flex;
+}
+
+.photo{
+    width: 30rem;
+    height: 50rem;
+    margin-right: 2rem;
+}
